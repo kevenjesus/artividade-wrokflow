@@ -1,0 +1,27 @@
+{
+  "name": "bootstrap_course",
+  "version": "1.0.0",
+  "description": "Curso de bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KleberYokota/Bootstrap.git"
+  },
+  "keywords": [
+    "bootstrap"
+  ],
+  "author": "Kleber Yokota <kleber_yokota@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KleberYokota/Bootstrap/issues"
+  },
+  "homepage": "https://github.com/KleberYokota/Bootstrap#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-minify-html-2": "^1.0.0"
+  }
+}

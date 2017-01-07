@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap_course",
+  "description": "Curso de bootstrap",
+  "main": "index.js",
+  "authors": [
+    "Kleber Yokota <kleber_yokota@hotmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bootstrap"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
