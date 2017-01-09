@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var sass = require("gulp-sass");
 var minifyHTML = require("gulp-minify-html-2");
 var options = {
     comments:true, 
@@ -12,6 +13,7 @@ var optCSS = {
 gulp.task('move-scss',function() {
 	return gulp.src('./source/scss/*.scss')
 		  .pipe(cleanCSS(optCSS))
+		  .pipe(sass())
 		  .pipe(gulp.dest('./dist/css'));
 });
 
