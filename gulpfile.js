@@ -9,11 +9,15 @@ var optCSS = {
 	compatibility: 'ie8'
 };
 
-gulp.task('move-scss',function() {
-	return gulp.src('./source/scss/*.scss')
-		  .pipe(cleanCSS(optCSS))
-		  .pipe(gulp.dest('./dist/css'));
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+ return gulp.src('./source/scss/*.scss')
+   .pipe(cleanCSS(optCSS))
+   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+   .pipe(gulp.dest('./dist/css'));
 });
+
 
 gulp.task('minifyHTML',function() {
 	return gulp.src('./source/index.html')
@@ -23,5 +27,5 @@ gulp.task('minifyHTML',function() {
 
 gulp.task('background',function(){
 	gulp.watch('./source/index.html',['minifyHTML']);
-	gulp.watch('./source/scss/*.scss',['move-scss']);
+	gulp.watch('./source/scss/*.scss',['sass']);
 })
